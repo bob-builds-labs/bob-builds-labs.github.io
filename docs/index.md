@@ -2,4 +2,4 @@
 
 
 ## Lab Preparation
-[lab preparation_gzuid](./00_lab_preparation.md)
+[lab preparation_guide](./00_lab_preparation.md)
