@@ -9,8 +9,6 @@ windows:
   children:
     databasehosts:
       hosts:
-        file:
-         ansible_host: file.demo.local
         sql01:
         sql02:
       vars:
