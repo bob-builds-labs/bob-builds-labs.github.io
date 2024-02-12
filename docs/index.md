@@ -3,3 +3,7 @@
 
 ## Lab Preparation
 [lab preparation_guide](./00_lab_preparation.md)
+
+## lab index
+
+[ansible_windows_agents](./01_ansible_windows_agents.md)
