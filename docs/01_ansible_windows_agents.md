@@ -54,5 +54,5 @@ ansible-playbook ansible_ppdm/100.1-playbook-copy-and-deploy-windows-agent.yaml 
 ## Approve Windows Agent
 
 ```bash
-ansible-playbook ansible_ppdm/99_download_agents.yml -i hosts.yaml --extra-vars "ppdm_fqdn=ppdm-1.demo.local ppdm_new_password='Password123!'"
+ansible-playbook ansible_ppdm/100.3_create_whitelistentry.yaml --extra-vars "ppdm_fqdn=ppdm-1.demo.local ppdm_new_password='Password123!'" -e '{ "host_list" : [ "file.demo.local" ] }'
 ```
