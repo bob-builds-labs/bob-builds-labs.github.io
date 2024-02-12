@@ -38,13 +38,13 @@ ansible-playbook ansible_ppdm/99_download_agents.yml -i hosts.yaml --extra-vars 
 ## Validate agent host ping-able vi winrm
 
 ```bash
-ansible-playbook ansible_ppdm/99_download_agents.yml -i hosts.yaml --extra-vars "ppdm_fqdn=ppdm-1.demo.local ppdm_new_password='Password123!'"
+ansible windows -m win_ping -i hosts.yaml --connection winrm
 ```
 ## configure PPDM to use DNS for name Resolution
 as we will register the agents to ppdm using the fqdn, we need to enable DNS for Agents on the PPDM Host:
 
 ```bash
-ansible-playbook ansible_ppdm/100.1-playbook-copy-and-deploy-windows-agent.yaml -i hosts.yaml --limit file, -e ppdm_fqdn=ppdm-1.demo.local
+ansible-playbook ansible_ppdm/100.0_set_dns_for_agents.yaml --extra-vars "ppdm_fqdn=ppdm-1.demo.local ppdm_new_password='Password123!'"
 ```
 
 ## deploy agents to host "file"
