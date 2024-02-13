@@ -27,6 +27,7 @@ windows:
     ansible_winrm_scheme: https
     ansible_winrm_server_cert_validation: ignore
     ansible_shell_type: cmd
+    ansible_connection: winrm
 EOF
 
 ```
