@@ -5,7 +5,7 @@ ssh into the ubuntu JumpHost
 create the inventory file as ~/workspace/hosts.yaml
 
 ```bash
-echo <<EOF > hosts.yaml
+cat <<EOF > hosts.yaml
 windows:
   children:
     databasehosts:
