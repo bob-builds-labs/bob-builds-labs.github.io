@@ -4,7 +4,8 @@
 ssh into the ubuntu JumpHost
 create the inventory file as ~/workspace/hosts.yaml
 
-```yaml
+```bash
+echo <<EOF > hosts.yaml
 windows:
   children:
     databasehosts:
@@ -26,6 +27,8 @@ windows:
     ansible_winrm_scheme: https
     ansible_winrm_server_cert_validation: ignore
     ansible_shell_type: cmd
+EOF
+
 ```
 
 ## Download Agents from PPDM Host to JumpBox
