@@ -18,13 +18,21 @@ restart-computer
 
 ```bash
 #!/bin/bash
+password='Password123!'           
+sudo adduser "user01" <<EOF
+$password
+$password
+EOF
+sudo su
+
+cat <<EOF > /etc/sudoers.d/user01
+user01 ALL=NOPASSWD: ALL
+EOF
+
 sudo apt-get update && sudo apt-get upgrade -y
-sudo apt install -y python3-pip direnv zsh
-python3 -m pip install --user ansible pywinrm
-python3 -m pip install --user pyyaml kubernetes openshift
-sudo sudo apt-get install -y gnupg software-properties-common apt-transport-https ca-certificates gnupg curl sudo
+sudo apt install -y python3-pip direnv zsh gnupg software-properties-common apt-transport-https ca-certificates gnupg curl sudo jq
+python3 -m pip install --user ansible pywinrm pyyaml kubernetes openshift
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-direnv hook zsh >> 
 source ~/.zshrc
 mkdir workspace && cd "$_"
 git clone https://github.com/bottkars/ansible_ppdm
