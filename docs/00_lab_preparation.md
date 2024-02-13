@@ -36,7 +36,7 @@ cd ~
 python3 -m pip install --user ansible pywinrm pyyaml kubernetes openshift
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 source ~/.zshrc
-sed -i "/# export PATH=*/c\export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH" ~/.zshrc
+sed -i '/# export PATH=*/c\export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH' ~/.zshrc
 mkdir workspace && cd "$_"
 git clone https://github.com/bottkars/ansible_ppdm
 git clone https://github.com/bottkars/ansible_ppdd
