@@ -32,9 +32,11 @@ EOF
 NEEDRESTART_SUSPEND=1 sudo apt-get update && sudo apt-get upgrade -y
 NEEDRESTART_SUSPEND=1 sudo apt install -y python3-pip direnv zsh gnupg software-properties-common apt-transport-https ca-certificates gnupg curl sudo jq
 sudo su user01
+cd ~
 python3 -m pip install --user ansible pywinrm pyyaml kubernetes openshift
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 source ~/.zshrc
+sed -i "/# export PATH=*/c\export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH" ~/.zshrc
 mkdir workspace && cd "$_"
 git clone https://github.com/bottkars/ansible_ppdm
 git clone https://github.com/bottkars/ansible_ppdd
