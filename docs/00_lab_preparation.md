@@ -21,7 +21,7 @@ restart-computer
 sudo apt-get update && sudo apt-get upgrade -y
 sudo apt install -y python3-pip direnv zsh
 python3 -m pip install --user ansible pywinrm
-python3 -m pip install pyyaml kubernetes openshift
+python3 -m pip install --user pyyaml kubernetes openshift
 sudo sudo apt-get install -y gnupg software-properties-common apt-transport-https ca-certificates gnupg curl sudo
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 direnv hook zsh >> 
