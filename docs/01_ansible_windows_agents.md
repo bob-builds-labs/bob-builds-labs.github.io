@@ -30,7 +30,7 @@ windows:
 
 ## Download Agents from PPDM Host to JumpBox
 ```bash
-ansible-playbook ansible_ppdm/99_download_agents.yml --extra-vars "ppdm_fqdn=ppdm-1.demo.local ppdm_new_password='Password123!'"
+ansible-playbook ansible_ppdm/100.0_download_agents.yml --extra-vars "ppdm_fqdn=ppdm-1.demo.local ppdm_new_password='Password123!'"
 ```
 
 ## Validate agent host ping-able vi winrm
