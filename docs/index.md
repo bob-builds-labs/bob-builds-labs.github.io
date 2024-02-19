@@ -6,5 +6,6 @@
 
 
 ## lab index
-|---|---|---|
-|01| Deploying Agents using Ansible | [ansible_windows_agents](./01_ansible_windows_agents.md)|
+Module | Title | Link
+------:|---------------------|---
+01| Deploying Agents using Ansible | [ansible_windows_agents](./01_ansible_windows_agents.md)
