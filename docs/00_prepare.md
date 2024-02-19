@@ -20,3 +20,4 @@ from the command prompt in ~/workspace, clone the ansible-ppdm repository from G
 ```bash
 git clone https://github.com/bottkars/ansible_ppdm
 ```
+![image](https://github.com/bob-builds-labs/bob-builds-labs.github.io/assets/8255007/b80124a4-b176-4551-9c4d-6e0690cbaba7)
