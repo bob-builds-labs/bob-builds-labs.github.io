@@ -2,8 +2,9 @@
 
 
 ## Lab Preparation
-[lab preparation_guide](./00_lab_preparation.md)
+[lab preparation_guide](./00_lab_prepare.md)
+
 
 ## lab index
-
-[ansible_windows_agents](./01_ansible_windows_agents.md)
+|---|---|---|
+|01| Deploying Agents using Ansible | [ansible_windows_agents](./01_ansible_windows_agents.md)|
