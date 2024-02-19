@@ -18,5 +18,5 @@ Open mRemoteNG and connect to ansible
 from the command prompt in ~/workspace, clone the ansible-ppdm repository from GitHub:
 
 ```bash
-git clone git@github.com:bottkars/ansible_ppdm.git
+git clone https://github.com/bottkars/ansible_ppdm
 ```
