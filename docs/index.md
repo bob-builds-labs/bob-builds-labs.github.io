@@ -2,7 +2,7 @@
 
 
 ## Lab Preparation
-[lab preparation_guide](./00_lab_prepare.md)
+[lab preparation_guide](./00_prepare.md)
 
 
 ## lab index
