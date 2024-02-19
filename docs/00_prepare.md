@@ -10,4 +10,13 @@ Power on the Machine named "ansible"
 ![image](https://github.com/bob-builds-labs/bob-builds-labs.github.io/assets/8255007/6b14a8e3-43a1-49d9-934e-669547ea2932)
 
 
+Open mRemoteNG and connect to ansible
 
+![image](https://github.com/bob-builds-labs/bob-builds-labs.github.io/assets/8255007/a2c177f8-82d5-4cd6-9565-b3285eed72ba)
+
+
+from the command prompt in ~/workspace, clone the ansible-ppdm repository from GitHub:
+
+```bash
+git clone git@github.com:bottkars/ansible_ppdm/ 
+```
