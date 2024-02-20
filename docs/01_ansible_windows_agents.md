@@ -82,7 +82,7 @@ ansible-playbook ansible_ppdm/100.1-playbook-copy-and-deploy-windows-agent.yaml 
 ### View Agent registration Status
 
 ```bash
-ansible-playbook ansible_ppdm/100.5_get_agent_registration_status.yaml
+ansible-playbook ansible_ppdm/100.5_get_agent_registration_status.yaml --extra-vars "ppdm_fqdn=ppdm-1.demo.local ppdm_new_password='Password123!'"
 ```
 
 
@@ -105,7 +105,7 @@ ansible-playbook ansible_ppdm/100.3_playbook_copy_and_deploy_windows_agent.yaml 
 ### View Agent registration Status
 
 ```bash
-ansible-playbook ansible_ppdm/100.5_get_agent_registration_status.yaml
+ansible-playbook ansible_ppdm/100.5_get_agent_registration_status.yaml --extra-vars "ppdm_fqdn=ppdm-1.demo.local ppdm_new_password='Password123!'"
 ```
 
 ### Approve Exchange Agents
