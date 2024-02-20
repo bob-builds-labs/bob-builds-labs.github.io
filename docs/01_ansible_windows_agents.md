@@ -86,5 +86,5 @@ ansible-playbook ansible_ppdm/100.3_create_whitelistentry.yaml --extra-vars "ppd
 The example will use the Inventory from the previously create file "hosts.yaml"
 As we honly want to tackle the host named file, we use the --limit parameter
 ```bash
-ansible-playbook ansible_ppdm/100.3-playbook-copy-and-deploy-windows-agent.yaml -i hosts.yaml --limit exchangehosts, -e ppdm_fqdn=ppdm-1.demo.local -e enable_itempoint=0
+ansible-playbook ansible_ppdm/100.3_playbook_copy_and_deploy_windows_agent.yaml -i hosts.yaml --limit exchangehosts, -e ppdm_fqdn=ppdm-1.demo.local -e enable_itempoint=0 -e @/tmp/agents.yaml
 ```
