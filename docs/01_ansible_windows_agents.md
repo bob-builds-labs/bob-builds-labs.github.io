@@ -66,7 +66,7 @@ ansible-playbook ansible_ppdm/100.0_download_agents.yml --extra-vars "ppdm_fqdn=
 as we will register the agents to ppdm using the fqdn, we need to enable DNS for Agents on the PPDM Host:
 
 ```bash
-ansible-playbook ansible_ppdm/100.0_set_dns_for_agents.yaml --extra-vars "ppdm_fqdn=ppdm-1.demo.local ppdm_new_password='Password123!'"
+ansible-playbook ansible_ppdm/100.2_set_dns_for_agents.yaml --extra-vars "ppdm_fqdn=ppdm-1.demo.local ppdm_new_password='Password123!'"
 ```
 
 ## deploy agents to host "file"
@@ -79,4 +79,12 @@ ansible-playbook ansible_ppdm/100.1-playbook-copy-and-deploy-windows-agent.yaml 
 
 ```bash
 ansible-playbook ansible_ppdm/100.3_create_whitelistentry.yaml --extra-vars "ppdm_fqdn=ppdm-1.demo.local ppdm_new_password='Password123!'" -e '{ "host_list" : [ "file.demo.local" ] }'
+```
+
+
+## deploy agents to hosts "exchangehosts"
+The example will use the Inventory from the previously create file "hosts.yaml"
+As we honly want to tackle the host named file, we use the --limit parameter
+```bash
+ansible-playbook ansible_ppdm/100.3-playbook-copy-and-deploy-windows-agent.yaml -i hosts.yaml --limit exchangehosts, -e ppdm_fqdn=ppdm-1.demo.local -e enable_itempoint=0
 ```
