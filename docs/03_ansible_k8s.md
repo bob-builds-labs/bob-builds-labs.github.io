@@ -1,11 +1,16 @@
-# This Lab will use Ansible to configure and onboard a Kubernetes Cluster
+# This Lab will use Ansible to configure and onboard an Openshift Cluster
 
-
+Make Sure Opensift 3-Node Cluster Runs
 ##
 
 ```bash
-KUBECONFIG=~/workspace/openshift/auth/kubeconfig
-PPDM_FQDN=ppdm-1.demo.local
-PPDM_INITIAL_PASSWORD='Password123!'
-DDVE_PRIVATE_FQDN=ddve-01.demo.local
+cd ~/workspace/0499/lab3
+```
+
+
+
+### create k8s policy
+
+```bash
+ansible-playbook ~/workspace/ansible_ppdm/130.0_playbook_add_k8s_policy_and_rule.yml
 ```
