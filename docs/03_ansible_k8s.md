@@ -4,8 +4,8 @@
 ##
 
 ```bash
-export KUBECONFIG=~/workspace/openshift/auth/kubeconfig
-export ppdm_fqdn=ppdm-1.demo.local
-export ppdm_new_password='Password123!'
-export ddve_fqdn=ddve-01.demo.local
+KUBECONFIG=~/workspace/openshift/auth/kubeconfig
+PPDM_FQDN=ppdm-1.demo.local
+PPDM_INITIAL_PASSWORD='Password123!'
+DDVE_PRIVATE_FQDN=ddve-01.demo.local
 ```
