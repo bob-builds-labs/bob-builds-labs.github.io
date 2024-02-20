@@ -35,7 +35,7 @@ windows:    # <- a group of Hosts addressed as windows
         exchange2:
       vars:
         app_agent: "{{ exchange_agent_windows }}"
-        app_agent_product_id: '{}'
+        app_agent_product_id: '{165F48F4-38C4-49DF-904E-4A23D39078BF}'
   vars: # -> vars for all Windows Hosts
     ansible_user: administrator
     ansible_password: Password123!
@@ -75,7 +75,7 @@ As we honly want to tackle the host named file, we use the --limit parameter
 ```bash
 ansible-playbook ansible_ppdm/100.1-playbook-copy-and-deploy-windows-agent.yaml -i hosts.yaml --limit file, -e ppdm_fqdn=ppdm-1.demo.local
 ```
-## Approve Windows Agent
+## Approve File Agent
 
 ```bash
 ansible-playbook ansible_ppdm/100.3_create_whitelistentry.yaml --extra-vars "ppdm_fqdn=ppdm-1.demo.local ppdm_new_password='Password123!'" -e '{ "host_list" : [ "file.demo.local" ] }'
@@ -86,5 +86,10 @@ ansible-playbook ansible_ppdm/100.3_create_whitelistentry.yaml --extra-vars "ppd
 The example will use the Inventory from the previously create file "hosts.yaml"
 As we honly want to tackle the host named file, we use the --limit parameter
 ```bash
-ansible-playbook ansible_ppdm/100.3_playbook_copy_and_deploy_windows_agent.yaml -i hosts.yaml --limit exchangehosts, -e ppdm_fqdn=ppdm-1.demo.local -e enable_itempoint=0 -e @/tmp/agents.yaml
+ansible-playbook ansible_ppdm/100.3_playbook_copy_and_deploy_windows_agent.yaml -i hosts.yaml --limit exchangehosts, -e ppdm_fqdn=ppdm-1.demo.local -e enable_itempoint=0
+```
+## Approve Exchange Agents
+
+```bash
+ansible-playbook ansible_ppdm/100.3_create_whitelistentry.yaml --extra-vars "ppdm_fqdn=ppdm-1.demo.local ppdm_new_password='Password123!'" -e '{ "host_list" : [ "exchange1.demo.local", "exchange2.demo.local"  ] }'
 ```
