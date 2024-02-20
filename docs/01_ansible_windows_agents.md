@@ -48,7 +48,7 @@ EOF
 ```
 
 
-## Validate agent host "file"  ping-able vi winrm
+### Validate agent host "file"  ping-able vi winrm
 
 ```bash
 ansible file -m win_ping -i hosts.yaml
@@ -56,39 +56,59 @@ ansible file -m win_ping -i hosts.yaml
 
 
 
-## Download Agents from PPDM Host to JumpBox
+### Download Agents from PPDM Host to JumpBox
 ```bash
 ansible-playbook ansible_ppdm/100.0_download_agents.yml --extra-vars "ppdm_fqdn=ppdm-1.demo.local ppdm_new_password='Password123!'"
 ```
 
 
-## configure PPDM to use DNS for name Resolution
+### configure PPDM to use DNS for name Resolution
 as we will register the agents to ppdm using the fqdn, we need to enable DNS for Agents on the PPDM Host:
 
 ```bash
 ansible-playbook ansible_ppdm/100.2_set_dns_for_agents.yaml --extra-vars "ppdm_fqdn=ppdm-1.demo.local ppdm_new_password='Password123!'"
 ```
 
-## deploy agents to host "file"
+## Installing the File Agent
+
+### deploy agents to host "file"
 The example will use the Inventory from the previously create file "hosts.yaml"
 As we honly want to tackle the host named file, we use the --limit parameter
+
 ```bash
 ansible-playbook ansible_ppdm/100.1-playbook-copy-and-deploy-windows-agent.yaml -i hosts.yaml --limit file, -e ppdm_fqdn=ppdm-1.demo.local
 ```
-## Approve File Agent
+
+### View Agent registration Status
+
+```bash
+ansible-playbook ansible_ppdm/100.5_get_agent_registration_status.yaml
+```
+
+
+### Approve File Agent
 
 ```bash
 ansible-playbook ansible_ppdm/100.3_create_whitelistentry.yaml --extra-vars "ppdm_fqdn=ppdm-1.demo.local ppdm_new_password='Password123!'" -e '{ "host_list" : [ "file.demo.local" ] }'
 ```
 
+## Deploy Exchange Agent(s)
 
-## deploy agents to hosts "exchangehosts"
+### deploy agents to hosts "exchangehosts"
 The example will use the Inventory from the previously create file "hosts.yaml"
 As we honly want to tackle the host named file, we use the --limit parameter
+
 ```bash
 ansible-playbook ansible_ppdm/100.3_playbook_copy_and_deploy_windows_agent.yaml -i hosts.yaml --limit exchangehosts, -e ppdm_fqdn=ppdm-1.demo.local -e enable_itempoint=0
 ```
-## Approve Exchange Agents
+
+### View Agent registration Status
+
+```bash
+ansible-playbook ansible_ppdm/100.5_get_agent_registration_status.yaml
+```
+
+### Approve Exchange Agents
 
 ```bash
 ansible-playbook ansible_ppdm/100.3_create_whitelistentry.yaml --extra-vars "ppdm_fqdn=ppdm-1.demo.local ppdm_new_password='Password123!'" -e '{ "host_list" : [ "exchange1.demo.local", "exchange2.demo.local"  ] }'
