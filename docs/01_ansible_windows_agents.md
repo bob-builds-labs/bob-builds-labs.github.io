@@ -111,5 +111,5 @@ ansible-playbook ansible_ppdm/100.5_get_agent_registration_status.yaml --extra-v
 ### Approve Exchange Agents
 
 ```bash
-ansible-playbook ansible_ppdm/100.3_create_whitelistentry.yaml --extra-vars "ppdm_fqdn=ppdm-1.demo.local ppdm_new_password='Password123!'" -e '{ "host_list" : [ "exchange1.demo.local", "exchange2.demo.local"  ] }'
+ansible-playbook ansible_ppdm/100.4_create_whitelistentry.yaml --extra-vars "ppdm_fqdn=ppdm-1.demo.local ppdm_new_password='Password123!'" -e '{ "host_list" : [ "exchange1.demo.local", "exchange2.demo.local"  ] }'
 ```
