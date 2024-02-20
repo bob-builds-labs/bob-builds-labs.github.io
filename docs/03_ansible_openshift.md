@@ -5,7 +5,7 @@ Make sure openshift 3-Node Cluster Runs via starting from the Openshift Folder o
 ![image](https://github.com/bob-builds-labs/bob-builds-labs.github.io/assets/8255007/16ada419-3e32-4324-912c-50ca260df14f)
 
 
-## Onboard Openshit into PPDM
+## Onboard Openshift into PPDM
 
 ### Load the Environment
 Change into lab 3 and allow the environment variables to load via direnv
