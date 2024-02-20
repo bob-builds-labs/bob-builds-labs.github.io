@@ -18,7 +18,8 @@ windows:    # <- a group of Hosts addressed as windows
     databasehosts:  # <- a group of Hosts addressed as databasehosts
       hosts:
         sql01: # <- an indivisual Host adressed as sql01
-        sql02: sql02.demo.local # <- an indivisual Host adressed as sql02. resolvable as sql02.demo.local
+        sql02:
+          ansible_host: sql02.demo.local # <- an indivisual Host adressed as sql02. resolvable as sql02.demo.local
       vars: # specific Vars for the Group Database Hosts
         app_agent: "{{ msapp_agent_windows }}"
         app_agent_product_id: '{165F48F4-38C4-49DF-904E-4A23D39078BF}'
