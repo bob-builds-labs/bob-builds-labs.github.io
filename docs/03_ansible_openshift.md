@@ -6,6 +6,11 @@ Start the OpenShift 3-Node Cluster  from the Openshift Folder on vCenter:
 Wait for https://console-openshift-console.apps.openshift.demo.local to be reachable
 It might take a while for the cluster to reconcile
 
+if not already done, clone into https://github.com/bob-builds-labs/0499.git
+```bash
+git clone https://github.com/bob-builds-labs/0499.git
+```
+
 ## Onboard Openshift into PPDM
 
 ### Load the Environment
