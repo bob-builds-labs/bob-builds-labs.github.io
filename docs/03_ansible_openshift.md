@@ -1,9 +1,10 @@
 # This Lab will use Ansible to configure and onboard an Openshift Cluster
 
-Make sure openshift 3-Node Cluster Runs via starting from the Openshift Folder on vCenter:
+Start the OpenShift 3-Node Cluster  from the Openshift Folder on vCenter:
+![image](https://github.com/bob-builds-labs/bob-builds-labs.github.io/assets/8255007/1f3f196e-9780-4989-a2b4-90da7a4361c2)
 
-![image](https://github.com/bob-builds-labs/bob-builds-labs.github.io/assets/8255007/16ada419-3e32-4324-912c-50ca260df14f)
-
+Wait for https://console-openshift-console.apps.openshift.demo.local to be reachable
+It might take a while for the cluster to reconcile
 
 ## Onboard Openshift into PPDM
 
