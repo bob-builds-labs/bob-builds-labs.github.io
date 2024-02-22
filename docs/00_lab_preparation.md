@@ -65,4 +65,5 @@ wget https://gist.githubusercontent.com/bottkars/8933d9f8c3bbf2ed406ab32697bb17e
 
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/openshift
+export KUBECONFIG=~/workspace/openshift/auth/kubeconfig
 ```
