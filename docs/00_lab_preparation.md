@@ -58,4 +58,6 @@ git clone https://github.com/bottkars/ansible_ppdm
 git clone https://github.com/bottkars/ansible_ppdd
 
 ssh-keygen -t ed25519 -N '' -f ~/.ssh/openshift
+wget https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/stable/openshift-install-linux.tar.gz
+tar xzfv openshift-install-linux.tar.gz
 ```
