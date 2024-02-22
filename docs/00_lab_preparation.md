@@ -62,4 +62,7 @@ wget https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/stable/ope
 tar xzfv openshift-install-linux.tar.gz
 
 wget https://gist.githubusercontent.com/bottkars/8933d9f8c3bbf2ed406ab32697bb17e8/raw/5214cbf3c823fcb304ce3db9f751646491c10a2f/install-config.yaml
+
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/openshift
 ```
