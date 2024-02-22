@@ -30,13 +30,29 @@ user01 ALL=NOPASSWD: ALL
 EOF
 
 NEEDRESTART_SUSPEND=1 sudo apt-get update && sudo apt-get upgrade -y
-NEEDRESTART_SUSPEND=1 sudo apt install -y python3-pip direnv zsh gnupg software-properties-common apt-transport-https ca-certificates gnupg curl sudo jq
-sudo su user01
-cd ~
+NEEDRESTART_SUSPEND=1 sudo apt install -y python3-pip direnv zsh gnupg software-properties-common apt-transport-https ca-certificates gnupg curl sudo jq tree
+### as root
+wget https://vcenter01.demo.local/certs/download.zip --no-check-certificate
+unzip download,zip
+mkdir -p /usr/share/ca-certificates/extra
+cp certs/lin/*.0  /usr/share/ca-certificates/extra
+cd /usr/share/ca-certificates/extra
+for file in *.0; do mv "$file" "$(basename "$file" .0).crt"; done
+update-ca-certificates
+sudo dpkg-reconfigure ca-certificates
+# GUI will come up#  Select 'Yes' to trust new certs#  Select checkbox for certs added to 'extra' directory
+# verify cert from 'extra' was added
+
+### as admin user
 python3 -m pip install --user ansible pywinrm pyyaml jinja2 kubernetes openshift jmespath
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-source ~/.zshrc
 sed -i '/# export PATH=*/c\export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH' ~/.zshrc
+direnv hook zsh >> ~/.zshrc
+source ~/.zshrc
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew install openshift-cli  kubectl k9s govc
+
 mkdir workspace && cd "$_"
 git clone https://github.com/bottkars/ansible_ppdm
 git clone https://github.com/bottkars/ansible_ppdd
