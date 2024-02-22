@@ -92,24 +92,3 @@ ansible-playbook ansible_ppdm/100.5_get_agent_registration_status.yaml --extra-v
 ansible-playbook ansible_ppdm/100.3_create_whitelistentry.yaml --extra-vars "ppdm_fqdn=ppdm-1.demo.local ppdm_new_password='Password123!'" -e '{ "host_list" : [ "file.demo.local" ] }'
 ```
 
-## Deploy Exchange Agent(s)
-
-### deploy agents to hosts "exchangehosts"
-The example will use the Inventory from the previously create file "hosts.yaml"
-As we honly want to tackle the host named file, we use the --limit parameter
-
-```bash
-ansible-playbook ansible_ppdm/100.3_playbook_copy_and_deploy_windows_agent.yaml -i hosts.yaml --limit exchangehosts, -e ppdm_fqdn=ppdm-1.demo.local -e enable_itempoint=0
-```
-
-### View Agent registration Status
-
-```bash
-ansible-playbook ansible_ppdm/100.5_get_agent_registration_status.yaml --extra-vars "ppdm_fqdn=ppdm-1.demo.local ppdm_new_password='Password123!'"
-```
-
-### Approve Exchange Agents
-
-```bash
-ansible-playbook ansible_ppdm/100.4_create_whitelistentry.yaml --extra-vars "ppdm_fqdn=ppdm-1.demo.local ppdm_new_password='Password123!'" -e '{ "host_list" : [ "exchange1.demo.local", "exchange2.demo.local"  ] }'
-```
