@@ -56,4 +56,6 @@ brew install openshift-cli  kubectl k9s govc
 mkdir workspace && cd "$_"
 git clone https://github.com/bottkars/ansible_ppdm
 git clone https://github.com/bottkars/ansible_ppdd
+
+ssh-keygen -t ed25519 -N '' -f ~/.ssh/openshift
 ```
