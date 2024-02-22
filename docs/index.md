@@ -7,7 +7,8 @@
 
 ## lab index  
 Module | Title | Link  
-------:|---------------------|---  
+------:|---------------------|--- 
+01.1 | Working with ansible and PPDM Agents | [ansible_ppdm_agents](./01.0_ansible_ppdm_agents.md)  
 01.1 | Deploying Windows File Agents using Ansible | [ansible_windows_file_agents](./01.1_ansible_windows_file_agents.md)  
 01.2 | Deploying Windows Exchange Agents using Ansible |  [ansible_exchange_agents](./01.2_ansible_exchange_agents.md)  
 01.3  
