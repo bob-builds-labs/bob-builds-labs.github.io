@@ -33,7 +33,7 @@ NEEDRESTART_SUSPEND=1 sudo apt-get update && sudo apt-get upgrade -y
 NEEDRESTART_SUSPEND=1 sudo apt install -y python3-pip direnv zsh gnupg software-properties-common apt-transport-https ca-certificates gnupg curl sudo jq tree
 ### as root
 wget https://vcenter01.demo.local/certs/download.zip --no-check-certificate
-unzip download,zip
+unzip download.zip
 mkdir -p /usr/share/ca-certificates/extra
 cp certs/lin/*.0  /usr/share/ca-certificates/extra
 cd /usr/share/ca-certificates/extra
