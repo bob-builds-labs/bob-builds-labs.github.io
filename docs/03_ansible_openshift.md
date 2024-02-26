@@ -39,7 +39,9 @@ To approve pending Requests, run
 ```bash
 oc get csr -o go-template='{{range .items}}{{if not .status}}{{.metadata.name}}{{"\n"}}{{end}}{{end}}' | xargs oc adm certificate approve
 ```
-
+```bash
+for i in `oc get csr | grep -i pending |  awk '{ print $1 }'`; do oc adm certificate approve $i; done
+```
 
 Wait for https://console-openshift-console.apps.openshift.demo.local to be reachable
 It might take a while for the cluster to reconcile
