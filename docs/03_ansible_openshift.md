@@ -14,13 +14,32 @@ cd ~/workspace/0499/lab3
 direnv allow .
 ```
 
-Start the OpenShift 3-Node Cluster  from the Openshift Folder on vCenter or vi govc: 
+Start the OpenShift 3-Node Cluster  from the Openshift Folder on vCenter or via govc: 
 
 ```bash
 govc find / -type m -name "openshift*master-*" | xargs -I % govc vm.power -on -vm.ipath=%
 ```
 
 ![image](https://github.com/bob-builds-labs/bob-builds-labs.github.io/assets/8255007/1f3f196e-9780-4989-a2b4-90da7a4361c2)
+
+It will take some time for the Nodes to Start.
+
+Validate the nodes are Ready:
+```bash
+oc get nodes -l node-role.kubernetes.io/master
+```
+
+If the nod3es are NotReady, there might be autstanding Certificate Signing requests.  
+Check with  
+```bash
+oc get csr
+```
+To approve pending Requests, run
+
+```bash
+oc get csr -o go-template='{{range .items}}{{if not .status}}{{.metadata.name}}{{"\n"}}{{end}}{{end}}'
+```
+
 
 Wait for https://console-openshift-console.apps.openshift.demo.local to be reachable
 It might take a while for the cluster to reconcile
