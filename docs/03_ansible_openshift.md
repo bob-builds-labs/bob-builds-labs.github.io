@@ -14,7 +14,11 @@ cd ~/workspace/0499/lab3
 direnv allow .
 ```
 
-Start the OpenShift 3-Node Cluster  from the Openshift Folder on vCenter or via govc: 
+Start the OpenShift 3-Node Cluster using ansible, govc or from the Openshift Folder on vCenter: 
+
+```bash
+ansible-playbook ../playbooks/start_stop_vms.yaml -e vm_names='openshift' -e state=start
+```
 
 ```bash
 govc find / -type m -name "openshift*master-*" | xargs -I % govc vm.power -on -vm.ipath=%
