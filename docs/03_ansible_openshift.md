@@ -24,12 +24,22 @@ govc find / -type m -name "openshift*master-*" | xargs -I % govc vm.power -on -v
 
 It will take some time for the Nodes to Start.
 
+As the nodes have been down since Deployment, there are outstanding cvertificate signing requests. Under normal Conditions, thos certificates would be renewed automatiaclly every 24hrs. 
+
+*kubernetes.io/kube-apiserver-client*: signs certificates that will be honored as client certificates by the API server. Never auto-approved by kube-controller-manager.
+
+*kubernetes.io/kube-apiserver-client-kubelet*: signs client certificates that will be honored as client certificates by the API server. May be auto-approved by kube-controller-manager.
+
+*kubernetes.io/kubelet-serving*: signs serving certificates that are honored as a valid kubelet serving certificate by the API server, but has no other guarantees. Never auto-approved by kube-controller-manager.
+
+
 Validate the nodes are Ready:
 ```bash
 oc get nodes -l node-role.kubernetes.io/master
 ```
 
-If the nod3es are NotReady, there might be autstanding Certificate Signing requests.  
+If the nodes are NotReady, there might be autstanding Certificate Signing requests.  
+
 Check with  
 ```bash
 oc get csr
@@ -39,9 +49,12 @@ To approve pending Requests, run
 ```bash
 oc get csr -o go-template='{{range .items}}{{if not .status}}{{.metadata.name}}{{"\n"}}{{end}}{{end}}' | xargs oc adm certificate approve
 ```
+
+Repeat the Above step multiple times until all nodes show ready 
 ```bash
-for i in `oc get csr | grep -i pending |  awk '{ print $1 }'`; do oc adm certificate approve $i; done
+oc get nodes -l node-role.kubernetes.io/master
 ```
+
 
 Wait for https://console-openshift-console.apps.openshift.demo.local to be reachable
 It might take a while for the cluster to reconcile
