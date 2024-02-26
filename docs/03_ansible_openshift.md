@@ -1,18 +1,11 @@
 # This Lab will use Ansible to configure and onboard an Openshift Cluster
 
-Start the OpenShift 3-Node Cluster  from the Openshift Folder on vCenter:
-![image](https://github.com/bob-builds-labs/bob-builds-labs.github.io/assets/8255007/1f3f196e-9780-4989-a2b4-90da7a4361c2)
 
-Wait for https://console-openshift-console.apps.openshift.demo.local to be reachable
-It might take a while for the cluster to reconcile
 
 if not already done, clone into https://github.com/bob-builds-labs/0499.git
 ```bash
 git clone https://github.com/bob-builds-labs/0499.git
 ```
-
-## Onboard Openshift into PPDM
-
 ### Load the Environment
 Change into lab 3 and allow the environment variables to load via direnv
 
@@ -20,6 +13,19 @@ Change into lab 3 and allow the environment variables to load via direnv
 cd ~/workspace/0499/lab3
 direnv allow .
 ```
+
+Start the OpenShift 3-Node Cluster  from the Openshift Folder on vCenter or vi govc:
+```bash
+govc find / -type m -name "openshift*master-*" | xargs -I % govc vm.power -on -vm.ipath=%
+`` 
+
+![image](https://github.com/bob-builds-labs/bob-builds-labs.github.io/assets/8255007/1f3f196e-9780-4989-a2b4-90da7a4361c2)
+
+Wait for https://console-openshift-console.apps.openshift.demo.local to be reachable
+It might take a while for the cluster to reconcile
+## Onboard Openshift into PPDM
+
+
 
 ### create k8s policy and Rule
 
