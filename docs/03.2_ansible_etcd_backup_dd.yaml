@@ -1,1 +1,24 @@
 
+# This lab will showcase etcd Backups to Datadomain
+
+## Requirements
+
+
+cd into lab3
+
+```bash
+cd ~/workspace/0499/lab3
+direnv allow .
+```
+clone into the ansible_ppdd Repository if not already done:
+
+```bash
+git clone https://github.com/bottkars/ansible_ppdd ~/workspace/ansible_ppdd
+```
+
+### Enable NFS v4 along with v3 on Datadomain
+
+```bash
+ansible-playbook  ~/workspace/ansible_ppdd/130.2_Playbook_enable_nfsv3v4.yml
+```
+
