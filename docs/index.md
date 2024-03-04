@@ -1,10 +1,12 @@
 # Welcome tho Bob builds Labs, the ultimate guide Bob´s 0499 Lab  
 
 
-## Lab Preparation ( for lab maintainers )  
+
+[Prerequisites](./00_prepare.md)  
+
 ![Ansibob](https://github.com/bob-builds-labs/bob-builds-labs.github.io/assets/8255007/e1e56e21-fafa-4a64-8ac9-1c336dc4bb03)
 
-[lab preparation_guide](./00_prepare.md)  
+
 
 
 ## lab user guide index
