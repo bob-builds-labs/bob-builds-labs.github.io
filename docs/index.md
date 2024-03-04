@@ -7,7 +7,8 @@
 [lab preparation_guide](./00_prepare.md)  
 
 
-## lab user guide index   
+## lab user guide index
+
 Module | Title | Link   
 ------:|---------------------|---  
 01.1 | Working with ansible and PPDM Agents | [ansible_ppdm_agents](./01.0_ansible_ppdm_agents.md)   
