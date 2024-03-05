@@ -2,7 +2,7 @@
 
 [Prerequisites](./00_prepare.md)  
 
-![ansible_bob2](https://github.com/bob-builds-labs/bob-builds-labs.github.io/assets/159522483/1e076a1f-099d-4216-9c2d-a6fcbbcf6ff4)
+![bob_ansible](https://github.com/bob-builds-labs/bob-builds-labs.github.io/assets/159522483/de2a98c5-b32c-4219-b516-d33541d147a0)
 
 ## Ansible Labs for Bob the Builder 2024
 
