@@ -1,15 +1,10 @@
 # Welcome tho Bob builds Labs, the ultimate guide Bob´s 0499 Lab  
 
-
-
 [Prerequisites](./00_prepare.md)  
 
-![Ansibob](https://github.com/bob-builds-labs/bob-builds-labs.github.io/assets/8255007/e1e56e21-fafa-4a64-8ac9-1c336dc4bb03)
+![ansible_bob2](https://github.com/bob-builds-labs/bob-builds-labs.github.io/assets/159522483/1e076a1f-099d-4216-9c2d-a6fcbbcf6ff4)
 
-
-
-
-## lab user guide index
+## Ansible Labs for Bob the Builder 2024
 
 Module | Title | Link   
 ------:|---------------------|---  
