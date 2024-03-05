@@ -1,4 +1,4 @@
-# Welcome tho Bob builds Labs, the ultimate guide Bob´s 0499 Lab  
+# Ansible Labs for DELL HOL-0499 "Bob the Builder" Edition
 
 [Prerequisites](./00_prepare.md)  
 
