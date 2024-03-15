@@ -18,5 +18,6 @@ Module | Title | Link
 03.0 | Start the Openshift Lab | [openshift lab](./03.0_prepare_openshift_lab.md)   
 03.1 | Onboard and Configure Openshift to ppdm using Ansible | [ansible_openshift_ppdm](./03.1_ansible_openshift_ppdm.md)  
 03.2 | Configure etcd backup to PPDD using ansible | [ansible_openshift_etcd_ppdd](./03.2_ansible_etcd_backup_dd.md)  
-03.3 | Create a demo Application from oc template | [oc template ](03.3_create_mysql_app.md)  
+03.3 | Create a Wordpress Application from Code using mariadb template | [oc template ](03.3_create_mysql_app.md)  
 03.4 | Discover new Assets and start PLC | [ansible start plc ](03.4_discover_asset_source_start_plc.md)
+03.8 | Add Dell CSM Operator from ansibleC | [ansible csm ](03.8_openshift_csm_modules.md)
