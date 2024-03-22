@@ -20,4 +20,5 @@ Module | Title | Link
 03.2 | Configure etcd backup to PPDD using ansible | [ansible_openshift_etcd_ppdd](./03.2_ansible_etcd_backup_dd.md)  
 03.3 | Create a Wordpress Application from Code using mariadb template | [oc template ](03.3_create_mysql_app.md)  
 03.4 | Discover new Assets and start PLC | [ansible start plc ](03.4_discover_asset_source_start_plc.md)
-03.8 | Add Dell CSM Operator from ansibleC | [ansible csm ](03.8_openshift_csm_modules.md)
+03.8 | Add Dell CSM Operator from ansible | [ansible csm ](03.8_openshift_csm_modules.md)
+09.0 | Update PPDM Using Ansible | [ansible csm ](09.0_upgrading_ppdm.md)
