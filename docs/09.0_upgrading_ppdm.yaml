@@ -1,4 +1,6 @@
 
 
 
-
+```bash
+ansible-playbook ~/workspace/ansible_ppdm/9.9-playbook_upload_update_ppdm_native.yml -e "upgrade_source=/swdist"
+```
