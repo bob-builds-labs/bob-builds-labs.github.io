@@ -1,6 +1,7 @@
 # Starting the Lab
 
-This lab requires an Ansible Controller. An up to date Version of Ansible is installed on the 
+This lab requires an Ansible Controller. An up to date Version of Ansible is installed on the linux host "ansible"
+
 Login to vcenter.demo.local with admin@vsphere.local
 
 ![image](https://github.com/bob-builds-labs/bob-builds-labs.github.io/assets/8255007/ed4f725a-dd00-408e-88ea-d08d914fee92)
