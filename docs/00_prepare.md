@@ -23,4 +23,4 @@ git clone https://github.com/dell-examples/ansible_ppdm ~/workspace/ansible_ppdm
 ```
 ![image](https://github.com/bob-builds-labs/bob-builds-labs.github.io/assets/8255007/b80124a4-b176-4551-9c4d-6e0690cbaba7)
 
-[Back to Index] (./index.md)
+[Back to Index](./index.md)
