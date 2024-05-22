@@ -12,3 +12,4 @@ oc delete crd -l component=velero
 oc delete clusterrolebinding -l component=velero
 oc delete namespace velero-ppdm
 ```
+[Back to Index](./index.md#ansible-labs-for-bob-the-builder-2024)
