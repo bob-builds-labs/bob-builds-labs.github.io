@@ -20,5 +20,7 @@ Module | Title | Link
 03.2 | Configure etcd backup to PPDD using ansible | [ansible_openshift_etcd_ppdd](./03.2_ansible_etcd_backup_dd.md)  
 03.3 | Create a Wordpress Application from Code (buildconfig) using mariadb template | [oc template ](03.3_create_wordpress_from_code.md)  
 03.4 | Discover new Assets and start PLC | [ansible start plc ](03.4_discover_asset_source_start_plc.md)
+03.5 | Restore K8s Namespace |[ansible restore_k8s ](03.5_restore_namespace_ansible.md)
+03.6 | SelfService Restore K8s Namespace |[ansible restore_k8s ](03.6_k8s_self_service_restore.md)
 03.8 | Add Dell CSM Operator from ansible | [ansible csm ](03.8_openshift_csm_modules.md)
 09.0 | Update PPDM Using Ansible | [ansible ppdm update ](09.0_upgrading_ppdm.md)
