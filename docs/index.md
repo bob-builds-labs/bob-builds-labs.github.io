@@ -23,4 +23,7 @@ Module | Title | ansible cli | Ansible Automation Platform (AAP) | Video
 03.5 | Restore K8s Namespace |[ansible restore_k8s ](03.5_restore_namespace_ansible.md)| |
 03.6 | SelfService Restore K8s Namespace |[selfservice restore_k8s ](03.6_k8s_self_service_restore.md)| |
 03.8 | Add Dell CSM Operator from ansible | [ansible csm ](03.8_openshift_csm_modules.md)| |
+04.0 | Deploy Ansible Automation Platform to Openshift | [ansible AAP](04.001.01_Ansible_Tower.md) 
 09.0 | Update PPDM Using Ansible | [ansible ppdm update ](09.0_upgrading_ppdm.md)| | [Update PPDM via AAP](https://dell-my.sharepoint.com/:v:/p/karsten_bott/ERLBmXfe3QpEtUfIw4motO0BtCoXkftACRwax9uAXV14gw?e=KNJd7F)
+
+
