@@ -30,7 +30,7 @@ Ensure python3-aiohttp is installed:
 from the command prompt in ~/workspace, clone the ansible-ppdm repository from GitHub:
 
 ```bash
-sudo apt install pyathon3-aiohttp
+sudo apt install python3-aiohttp
 ```
 
 [Back to Index](./index.md#ansible-labs-for-bob-the-builder-2024)
