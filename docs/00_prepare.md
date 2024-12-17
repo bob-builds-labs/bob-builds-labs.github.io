@@ -25,12 +25,12 @@ git clone https://github.com/dell-examples/ansible_ppdm ~/workspace/ansible_ppdm
 
 
 
-Ensure python3-aiohttp is installed:
+Ensure python3-aiohttp and ans python3-openshift is installed:
 
 from the command prompt in ~/workspace, clone the ansible-ppdm repository from GitHub:
 
 ```bash
-sudo apt install python3-aiohttp ansible-kubernetes
+sudo apt install python3-aiohttp python3-openshift -y
 ```
 
 [Back to Index](./index.md#ansible-labs-for-bob-the-builder-2024)
