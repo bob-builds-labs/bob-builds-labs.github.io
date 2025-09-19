@@ -13,8 +13,8 @@ Module | Title | ansible cli | Ansible Automation Platform (AAP) | Video
 01.2 | Deploying Windows Exchange Agents using Ansible |  [ansible_exchange_agents](./01.2_ansible_exchange_agents.md) | |   
 01.3 | Deploying Deploying PPDM msappsagent SQL Agent(s) using Ansible | [ansible sql agents](./01.3_ansible_sql_agents.md) | |  
 02.0 | Creating Policies | ||  
-02.1 | Creating Filesystem Policy, Assign Assets and run Manual Protection | [ansible_file_policy](./02.1_ansible_fs_policy.md)| |
-02.3 | Creating Microsoft SQL Policy, Assign Assets and run Manual Protection | [ansible_sql_policy](./02.3_ansible_sql_policy.md)| |
+02.1 | Creating Filesystem Policy, Assign Assets and run Manual Protection | [ansible_file_policy](./01.12_ansible_fs_policy.md)| |
+02.3 | Creating Microsoft SQL Policy, Assign Assets and run Manual Protection | [ansible_sql_policy](./01.13_ansible_sql_policy.md)| |
 03.0 | Start the Openshift Lab | [openshift lab](./03.0_prepare_openshift_lab.md)| |   
 03.1 | Onboard and Configure Openshift to ppdm using Ansible | [ansible_openshift_ppdm](./03.1_ansible_openshift_ppdm.md)| |  
 03.2 | Configure etcd backup to PPDD using ansible | [ansible_openshift_etcd_ppdd](./03.2_ansible_etcd_backup_dd.md)| |  
