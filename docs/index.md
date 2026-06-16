@@ -1,8 +1,7 @@
-# Ansible Labs for DELL HOL-0499 "Bob the Builder" Edition
+# Labs Index DELL HOL-0499 "Bob the Builder" Edition
 
 [Prerequisites](./00_prepare.md)  
 
-![bob_ansible](https://github.com/bob-builds-labs/bob-builds-labs.github.io/assets/159522483/de2a98c5-b32c-4219-b516-d33541d147a0)
 
 ## Ansible Labs for Bob the Builder 2024
 
@@ -26,8 +25,10 @@ Module | Title | ansible cli | Ansible Automation Platform (AAP) | Video
 04.0 | Deploy Ansible Automation Platform to Openshift | [ansible AAP](04.001.01_Ansible_Tower.md) 
 06.0 | Configure PPDM with Keycloak | [ppdm_keycloak](06.00_keycloak.md) ||
 07.0 | What is ppdm-cli | [ppdm-cli](07.00_ppdm-cli.md) ||
-07.1 | ppdm-cli config | [ppdm-cli](07.01_ppdm-cli_config.md) ||
-07.9 | ppdm-cli command reference | [ppdm-cli](07.09_ppdm-cli_command_reference.md) ||
+07.1 | ppdm-cli config | [ppdm-cli configuration](07.01_ppdm-cli_config.md) ||
+07.2 | ppdm-cli examples | [ppdm-cli examples](07.02_ppdm-cli_examples.md) ||
+07.3 | ppdm-cli ppdm upgrade | [ppdm-cli upgrade](07.02_ppdm-cli_upgrade.md) ||
+07.9 | ppdm-cli command reference | [ppdm-cli command reference](07.09_ppdm-cli_command_reference.md) ||
 09.0 | Update PPDM Using Ansible | [ansible ppdm update ](09.0_upgrading_ppdm.md)| | [Update PPDM via AAP](https://dell-my.sharepoint.com/:v:/p/karsten_bott/ERLBmXfe3QpEtUfIw4motO0BtCoXkftACRwax9uAXV14gw?e=KNJd7F)
 
 
