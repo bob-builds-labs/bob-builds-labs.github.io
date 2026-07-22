@@ -97,7 +97,7 @@ No conversion is needed. CDI converts `.qcow2` to raw block format automatically
 virtctl image-upload dv ddve-rootdisk \
   --namespace ddve \
   --size=350Gi \
-  --image-path=./ddve-<version>.qcow2 \
+  --image-path=${DDVE_IMAGE} \
   --storage-class=ocs-storagecluster-ceph-rbd-virtualization \
   --volume-mode=Block \
   --access-mode=ReadWriteOnce \
