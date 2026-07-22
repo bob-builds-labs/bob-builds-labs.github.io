@@ -236,15 +236,15 @@ spec:
             - name: datadisk1      # SCSI 0:2
               disk:
                 bus: scsi
-            - name: datadisk2      # SCSI 0:3
-              disk:
-                bus: scsi
-            - name: datadisk3      # SCSI 0:4
-              disk:
-                bus: scsi
-            - name: datadisk4      # SCSI 0:5
-              disk:
-                bus: scsi
+#            - name: datadisk2      # SCSI 0:3
+#              disk:
+#                bus: scsi
+#            - name: datadisk3      # SCSI 0:4
+#              disk:
+#                bus: scsi
+#            - name: datadisk4      # SCSI 0:5
+#              disk:
+#                bus: scsi
           # ── Single NIC — default pod network (masquerade) ──
           interfaces:
             - name: default
@@ -266,15 +266,15 @@ spec:
         - name: datadisk1
           persistentVolumeClaim:
             claimName: ddve-data-1
-        - name: datadisk2
-          persistentVolumeClaim:
-            claimName: ddve-data-2
-        - name: datadisk3
-          persistentVolumeClaim:
-            claimName: ddve-data-3
-        - name: datadisk4
-          persistentVolumeClaim:
-            claimName: ddve-data-4
+#        - name: datadisk2
+#          persistentVolumeClaim:
+#            claimName: ddve-data-2
+#        - name: datadisk3
+#          persistentVolumeClaim:
+#            claimName: ddve-data-3
+#        - name: datadisk4
+#          persistentVolumeClaim:
+#            claimName: ddve-data-4
 ```
 
 ```bash
