@@ -99,7 +99,7 @@ virtctl image-upload dv ddve-rootdisk \
   --size=350Gi \
   --image-path=${DDVE_IMAGE} \
   --storage-class=ocs-storagecluster-ceph-rbd-virtualization \
-  --volume-mode=Block \
+  --volume-mode=block \
   --access-mode=ReadWriteOnce \
   --wait-secs=600
 ```
