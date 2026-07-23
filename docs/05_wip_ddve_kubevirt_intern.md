@@ -354,11 +354,9 @@ With masquerade NAT, DDVE receives its pod IP via DHCP automatically on `ethV0`.
 net show config
 ```
 
-If DHCP did not assign an address, set it manually:
+If DHCP did not assign an address, adjust the MTU Size to 1400:
 ```
-net set interface ethV0 ipaddr <POD-IP> netmask <MASK>
-net config defaultroute <GW>
-net enable interface ethV0
+net config ethV0 dhcp yes ipversion ipv4 mtu 1400
 ```
 
 ### DDOS initial configuration wizard
@@ -366,7 +364,7 @@ net enable interface ethV0
 ```bash
 system set hostname ddve.ddve.svc.cluster.local
 system set timezone Europe/Berlin          # adjust to your timezone
-user change password admin
+storage add tier active dev<n>
 filesys create
 filesys enable
 ```
