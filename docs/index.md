@@ -23,6 +23,7 @@ Module | Title | ansible cli | Ansible Automation Platform (AAP) | Video
 03.6 | SelfService Restore K8s Namespace |[selfservice restore_k8s ](03.6_k8s_self_service_restore.md)| |
 03.8 | Add Dell CSM Operator from ansible | [ansible csm ](03.8_openshift_csm_modules.md)| |
 04.0 | Deploy Ansible Automation Platform to Openshift | [ansible AAP](04.001.01_Ansible_Tower.md) 
+05.1 | Deploy DDVE using Helm | [helm ddve](05.01_helm_ddve.md) ||
 06.0 | Configure PPDM with Keycloak | [ppdm_keycloak](06.00_keycloak.md) ||
 07.0 | What is ppdm-cli | [ppdm-cli](07.00_ppdm-cli.md) ||
 07.1 | ppdm-cli config | [ppdm-cli configuration](07.01_ppdm-cli_config.md) ||
